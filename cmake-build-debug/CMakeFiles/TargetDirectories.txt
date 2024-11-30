@@ -1,0 +1,4 @@
+C:/Users/carlo/Desktop/uni/programacion/Garcia_Carlos_ExamenCPP3/cmake-build-debug/CMakeFiles/original.dir
+C:/Users/carlo/Desktop/uni/programacion/Garcia_Carlos_ExamenCPP3/cmake-build-debug/CMakeFiles/modificado-en-clase.dir
+C:/Users/carlo/Desktop/uni/programacion/Garcia_Carlos_ExamenCPP3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/carlo/Desktop/uni/programacion/Garcia_Carlos_ExamenCPP3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
