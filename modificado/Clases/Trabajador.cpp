@@ -1,26 +1,26 @@
-#include "Worker.h"
+#include "Trabajador.h"
 #include <iostream>
 
 // Constructor básico
-Worker::Worker(WorkerType workerType)
+Trabajador::Trabajador(TrabajadorType workerType)
     : type(workerType), currentTask(nullptr), specific_task(false) {}
 
 // Constructor con propiedad specific_task
-Worker::Worker(WorkerType workerType, bool onlySpecificTask)
+Trabajador::Trabajador(TrabajadorType workerType, bool onlySpecificTask)
     : type(workerType), currentTask(nullptr), specific_task(onlySpecificTask) {}
 
 // Obtener el tipo del trabajador
-WorkerType Worker::getType() const {
+TrabajadorType Trabajador::getType() const {
     return type;
 }
 
 // Obtener el estado del trabajador (activo si tiene una tarea asignada)
-bool Worker::getState() const {
+bool Trabajador::getState() const {
     return currentTask != nullptr;
 }
 
 // Asignar una tarea al trabajador
-bool Worker::assignTask(const std::shared_ptr<Task>& task) {
+bool Trabajador::assignTask(const std::shared_ptr<Task>& task) {
     if (!task) {
         std::cerr << "Error: Task cannot be null." << std::endl;
 
@@ -45,7 +45,7 @@ bool Worker::assignTask(const std::shared_ptr<Task>& task) {
 }
 
 // Actualizar el estado del trabajador (implementación futura)
-void Worker::Update() {
+void Trabajador::Update() {
     // Este método se implementará en el futuro según los requisitos.
 
     if (currentTask) {
@@ -59,12 +59,12 @@ void Worker::Update() {
 }
 
 // Mostrar información del trabajador
-void Worker::displayWorkerInfo() const {
+void Trabajador::displayWorkerInfo() const {
     std::cout << "Worker Type: ";
     switch (type) {
-        case WorkerType::CEO: std::cout << "CEO"; break;
-        case WorkerType::AGENCY: std::cout << "AGENCY"; break;
-        case WorkerType::GENERIC: std::cout << "GENERIC"; break;
+        case TrabajadorType::CEO: std::cout << "CEO"; break;
+        case TrabajadorType::AGENCY: std::cout << "AGENCY"; break;
+        case TrabajadorType::GENERIC: std::cout << "GENERIC"; break;
     }
     std::cout << std::endl;
 
@@ -79,11 +79,11 @@ void Worker::displayWorkerInfo() const {
     }
 }
 
-std::string Worker::get_type() const {
+std::string Trabajador::get_type() const {
     switch (type) {
-        case WorkerType::CEO: return "CEO";
-        case WorkerType::AGENCY: return "AGENCY";
-        case WorkerType::GENERIC: return "GENERIC";
+        case TrabajadorType::CEO: return "CEO";
+        case TrabajadorType::AGENCY: return "AGENCY";
+        case TrabajadorType::GENERIC: return "GENERIC";
         default: return "UNKNOWN";
     }
 }

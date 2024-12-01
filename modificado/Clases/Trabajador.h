@@ -5,26 +5,26 @@
 #include <string>
 #include <memory>
 #include "../tarea/Tarea.h" // Incluye la definición de la clase Task
-#include "WorkerType.h" // Incluye la definición de WorkerType
+#include "TrabajadorType.h" // Incluye la definición de WorkerType
 
 class Task; // Declaración anticipada para evitar dependencias circulares
 
 // Enumeración para los tipos de trabajadores
 
 
-class Worker {
+class Trabajador {
 private:
-    WorkerType type;                       // Tipo de trabajador (inmutable)
+    TrabajadorType type;                       // Tipo de trabajador (inmutable)
     std::shared_ptr<Task> currentTask;     // Tarea actual (puntero inteligente)
     bool specific_task;                    // Indica si el trabajador solo acepta tareas específicas
 
 public:
     // Constructores
-    Worker(WorkerType workerType);                               // Constructor básico
-    Worker(WorkerType workerType, bool onlySpecificTask);        // Constructor con propiedad specific_task
+    Trabajador(TrabajadorType workerType);                               // Constructor básico
+    Trabajador(TrabajadorType workerType, bool onlySpecificTask);        // Constructor con propiedad specific_task
 
     // Métodos para obtener el tipo del trabajador
-    WorkerType getType() const;
+    TrabajadorType getType() const;
 
     // Métodos relacionados con tareas
     bool getState() const;                 // Activo solo si tiene tarea

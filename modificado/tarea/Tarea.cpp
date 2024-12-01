@@ -1,11 +1,11 @@
 #include "Tarea.h"
-#include "../Clases/Worker.h" // Incluye la definición de Worker y WorkerType
-#include "../Clases/WorkerType.h"
+#include "../Clases/Trabajador.h" // Incluye la definición de Worker y WorkerType
+#include "../Clases/TrabajadorType.h"
 #include <iostream>
 #include <stdexcept> // Para manejar excepciones
 
 // Constructor con WorkerType y múltiples dependencias
-Task::Task(const std::string& taskName, int taskDuration, WorkerType workerType,
+Task::Task(const std::string& taskName, int taskDuration, TrabajadorType workerType,
            const std::vector<std::shared_ptr<Task>>& dependencies)
     : name(taskName), duration(taskDuration), remaining_time(taskDuration),
       assigned_worker(nullptr), worker_type(workerType), dependencies(dependencies) {
@@ -19,15 +19,15 @@ Task::Task(const std::string& taskName, int taskDuration, WorkerType workerType,
 // Constructor con múltiples dependencias pero sin WorkerType (WorkerType::Generic por defecto)
 Task::Task(const std::string& taskName, int taskDuration,
            const std::vector<std::shared_ptr<Task>>& dependencies)
-    : Task(taskName, taskDuration, WorkerType::GENERIC, dependencies) {}
+    : Task(taskName, taskDuration, TrabajadorType::GENERIC, dependencies) {}
 
 // Obtener el trabajador asignado
-Worker* Task::getWorker() const {
+Trabajador* Task::getWorker() const {
     return assigned_worker;
 }
 
 // Configurar el trabajador asignado
-void Task::setWorker(Worker* worker) {
+void Task::setWorker(Trabajador* worker) {
     if (!worker) {
         throw std::runtime_error("Error: Worker cannot be null.");
     }
@@ -80,6 +80,6 @@ int Task::getRemainingTime() const {
 }
 
 // Obtener el tipo de trabajador requerido para esta tarea
-WorkerType Task::getWorkerType() const {
+TrabajadorType Task::getWorkerType() const {
     return worker_type;
 }

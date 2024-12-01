@@ -17,7 +17,7 @@ add_executable(modificado-en-clase
     modificado/tarea/Tarea.cpp
     modificado/tarea/Tarea.h
     modificado/crud/CRUD.h
-    modificado/Clases/Worker.cpp
-    modificado/Clases/Worker.h
-    modificado/Clases/WorkerType.h
+        modificado/Clases/Trabajador.cpp
+        modificado/Clases/Trabajador.h
+        modificado/Clases/TrabajadorType.h
 )

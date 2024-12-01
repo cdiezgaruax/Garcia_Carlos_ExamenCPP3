@@ -5,7 +5,7 @@
 #ifndef WORKERTYPE_H
 #define WORKERTYPE_H
 
-enum class WorkerType {
+enum class TrabajadorType {
     CEO,
     AGENCY,
     GENERIC

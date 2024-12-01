@@ -3,23 +3,23 @@
 #include <memory>
 #include "crud/crud.h"
 #include "tarea/Tarea.h"
-#include "Clases/Worker.h"
-#include "Clases/WorkerType.h"
+#include "Clases/Trabajador.h"
+#include "Clases/TrabajadorType.h"
 
 int main() {
     std::vector<std::shared_ptr<Task>> taskDB;
-    std::vector<std::shared_ptr<Worker>> workerDB;
+    std::vector<std::shared_ptr<Trabajador>> workerDB;
 
     CRUD<std::shared_ptr<Task>> taskCRUD(taskDB);
-    CRUD<std::shared_ptr<Worker>> workerCRUD(workerDB);
+    CRUD<std::shared_ptr<Trabajador>> workerCRUD(workerDB);
 
-    auto task1 = std::make_shared<Task>("Planificacion", 5, WorkerType::CEO);
-    auto task2 = std::make_shared<Task>("Marketing", 3, WorkerType::AGENCY);
+    auto task1 = std::make_shared<Task>("Planificacion", 5, TrabajadorType::CEO);
+    auto task2 = std::make_shared<Task>("Marketing", 3, TrabajadorType::AGENCY);
     taskCRUD.crear(task1);
     taskCRUD.crear(task2);
 
-    auto worker1 = std::make_shared<Worker>(WorkerType::CEO);
-    auto worker2 = std::make_shared<Worker>(WorkerType::AGENCY);
+    auto worker1 = std::make_shared<Trabajador>(TrabajadorType::CEO);
+    auto worker2 = std::make_shared<Trabajador>(TrabajadorType::AGENCY);
     workerCRUD.crear(worker1);
     workerCRUD.crear(worker2);
 
