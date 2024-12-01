@@ -1,6 +1,6 @@
-# Garcia\_Carlos\_ExamenCPP3
+# Garcia_Carlos_ExamenCPP3
 
-**Link:** [https://github.com/cdiezgaruax/Garcia_Carlos_ExamenCPP3/tree/main](https://github.com/cdiezgaruax/Garcia_Carlos_ExamenCPP3/tree/main)
+**Repositorio GitHub:** [Garcia_Carlos_ExamenCPP3](https://github.com/cdiezgaruax/Garcia_Carlos_ExamenCPP3/tree/main)
 
 ## Condiciones de Entrega del Examen de Programación en C++
 
@@ -95,3 +95,32 @@ Ustedes son Project Managers en una empresa internacional. Reciben una llamada u
 - Diagrama de flujo que represente el cronograma de ejecución de las tareas.
 
 ¡Buena suerte y que la optimización esté de su lado!
+
+
+### Trabajo original del programa
+
+#### Cálculo de personal necesario:
+
+- Utiliza un algoritmo de ordenamiento topológico para procesar las tareas con dependencias.
+- Iterativamente verifica si las tareas pueden completarse en el tiempo dado con un número creciente de personas.
+
+#### Distribución de tareas:
+
+- Asigna cada tarea a la persona que tiene menor carga de trabajo acumulada.
+- Respeta las dependencias de las tareas: no se puede iniciar una tarea hasta que sus dependencias hayan sido completadas.
+
+#### Cálculo de horarios:
+
+- Para cada tarea, calcula el horario de inicio basándose en la hora inicial proporcionada, la duración de la tarea y el tiempo acumulado por la persona asignada.
+
+#### Salida detallada:
+
+- Muestra por persona:
+  - Qué tareas realiza.
+  - La hora de inicio de cada tarea.
+- Muestra una tabla general con todas las tareas organizadas por horario.
+
+### Modificado
+
+- Es lo que realizamos en clase, he avanzado un poco más pero no he sabido completarlo.
+- En los dos me ayudé de ChatGPT.
